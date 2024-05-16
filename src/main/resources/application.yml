@@ -12,7 +12,7 @@ spring:
         format_sql: true
   datasource:
       driverClassName: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_SCHEMA:tupperware_forca_vendas}
+      url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_SCHEMA:my-database}
       username: ${MYSQL_USER:root}
       password: ${MYSQL_PASS:root}
 jwt:
