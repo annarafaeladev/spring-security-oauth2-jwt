@@ -11,11 +11,12 @@ spring:
         show_sql: true
         format_sql: true
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/my_database}
-    username: root
-    password: root
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_SCHEMA:tupperware_forca_vendas}
+      username: ${MYSQL_USER:root}
+      password: ${MYSQL_PASS:root}
 jwt:
   publicKey: classpath:app.pub
   privateKey: classpath:app.key
   expires: 3000
+  issuer: my-service-auth
