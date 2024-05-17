@@ -44,6 +44,33 @@ command:
 mvn spring-boot:run
 ```
 
+## 📌 Generate RSA Key
+
+Chose package example: 
+```
+cd ./src/main/resources
+```
+#### Generate private Key
+
+Run this command to generate a 4096-bit private key and output it to the private.pem file. If you like, you may change the key length and/or output file.
+
+```
+openssl genrsa -out private.key 2048
+```
+
+#### Generate public  Key
+
+Given a private key, you may derive its public key and output it to public.pem using this command. (You may also paste your OpenSSL-generated private key into the form above to get its public key.)
+
+```
+openssl rsa -in private.key -pubout -out public.key
+```
+Output it's OK: 
+
+```
+writing RSA key
+```
+
 ## 📌 Tests
 To execute all tests, run the following command:
 ```

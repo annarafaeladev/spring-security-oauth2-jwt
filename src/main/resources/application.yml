@@ -16,7 +16,7 @@ spring:
       username: ${MYSQL_USER:root}
       password: ${MYSQL_PASS:root}
 jwt:
-  publicKey: classpath:app.pub
-  privateKey: classpath:app.key
+  publicKey: classpath:public.key
+  privateKey: classpath:private.key
   expires: 3000
   issuer: my-service-auth
